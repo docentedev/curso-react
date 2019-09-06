@@ -14,7 +14,8 @@ Material Curso de React
 - Aplicacion en N Capas [link](https://github.com/docentedev/curso-react/tree/master/contenido/n-capas)
 - Context [link](https://github.com/docentedev/curso-react/tree/master/contenido/context)
 - Hooks [link](https://github.com/docentedev/curso-react/tree/master/contenido/hook)
-- Redux
+- Redux [link](https://github.com/docentedev/curso-react/tree/master/contenido/redux)
+    - proyecto ejemplo Redux [link](https://github.com/docentedev/curso-react/tree/master/contenido/redux/react-redux-todos)
 - Redux en N Capas
 - Redux Asincrono
 - React Router

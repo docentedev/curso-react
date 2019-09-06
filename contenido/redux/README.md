@@ -1,5 +1,7 @@
 # Redux
 
+- proyecto ejemplo Redux [link](https://github.com/docentedev/curso-react/tree/master/contenido/redux/react-redux-todos)
+
 lo minimo aceptable para utilizar organizadamente redux sera:
 - un archivo donde crear el store
 - archivo de acciones
