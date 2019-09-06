@@ -1,0 +1,14 @@
+.button-toggle {
+    border: none;
+    color: #f9f9f9;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.button-toggle.button-toggle--completed {
+    background: #4CAF50;
+}
+
+.button-toggle.button-toggle--uncompleted {
+    background: #FF5722;
+}
