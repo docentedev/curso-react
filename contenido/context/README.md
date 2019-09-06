@@ -147,7 +147,7 @@ export default Consumidor3;
 ```
 
 ***Consumidor4.jsx***
-Utilizando Hoock `se vera luego mas a fondo`
+Utilizando hooks `se vera luego mas a fondo`
 
 ```js
 import React, { useContext } from 'react';
