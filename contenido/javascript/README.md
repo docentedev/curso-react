@@ -41,6 +41,9 @@ array1.filter(n => n > 3);
 // salida: [4,5,6];
 array1.reduce((acumulador, valActual) => acumulador + valActual, 0);
 // salida: 21
+const nuevoValor = 7
+array1.concat([7]);
+// salida: [1,2,3,4,5,6,7]
 ```
 
 ## Template string
