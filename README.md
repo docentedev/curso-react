@@ -1,7 +1,7 @@
 # curso-react
 Material Curso de React
 
-- Javascript [link](/curso-react/tree/master/contenido/javascript)
+- Javascript [link](https://github.com/docentedev/curso-react/tree/master/contenido/javascript)
 - Componentes React
     - Componentes Basados en Clases
     - Componentes Basados en Funcion
