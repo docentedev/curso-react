@@ -93,4 +93,4 @@ anterior seria `this.props.title` y `this.props.children`
 
 ## Efecto de cambiar Props y State
 Cada vez que cambia un valor en el `state` o cambia una `props`
-se ejecutara el ciclo de vide de Actualizacion
+se ejecutara el ciclo de vida de Actualizacion
