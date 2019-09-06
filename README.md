@@ -2,7 +2,7 @@
 Material Curso de React
 
 - Javascript [link](https://github.com/docentedev/curso-react/tree/master/contenido/javascript)
-- Componentes React
+- Componentes React [link](https://github.com/docentedev/curso-react/tree/master/contenido/componentes)
     - Componentes Basados en Clases
     - Componentes Basados en Funcion
     - Composicion de componentes
