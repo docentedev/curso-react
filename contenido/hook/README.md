@@ -47,9 +47,12 @@ function App() {
   }, []);
 
   // siempre se ejecutara este efecto aun en la primera
-  // renderizacion incluso se title no ha cambiado
+  // renderizacion incluso si title no ha cambiado
+  // luego siempre se ejecutara al haber algun cambio en
+  // la variable title
   useEffect(() => {
     console.log("componentDidUpdate simulado");
+    console.log(`El valor del titulo es: ${title}`);
     setTitle("Bla");
   }, [title]);
 
