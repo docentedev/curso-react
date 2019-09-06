@@ -6,9 +6,11 @@ Material Curso de React
     - Componentes Basados en Clases
     - Componentes Basados en Funcion
     - Composicion de componentes
+- State, Props y Javascript en JSX [link](https://github.com/docentedev/curso-react/tree/master/contenido/state-props)
+    - State de Componentes Basados en Clases
+    - Props de Componentes Basados en Clases y Funcionales
+    - Efecto de cambiar Props y State
 - Ciclo de Vida  [link](https://github.com/docentedev/curso-react/tree/master/contenido/ciclo-de-vida)
-- State de Componentes Basados en Clases
-- Props de Componentes Basados en Clases y Funcionales
 - Aplicacion en N Capas
 - Context
 - Hooks
