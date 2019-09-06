@@ -11,8 +11,8 @@ Material Curso de React
     - Props de Componentes Basados en Clases y Funcionales
     - Efecto de cambiar Props y State
 - Ciclo de Vida  [link](https://github.com/docentedev/curso-react/tree/master/contenido/ciclo-de-vida)
-- Aplicacion en N Capas
-- Context
+- Aplicacion en N Capas [link](https://github.com/docentedev/curso-react/tree/master/contenido/n-capas)
+- Context [link](https://github.com/docentedev/curso-react/tree/master/contenido/context)
 - Hooks
 - Redux
 - Redux en N Capas
