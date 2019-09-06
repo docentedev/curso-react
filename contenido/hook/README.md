@@ -24,9 +24,6 @@ function Example() {
 
 ```js
 import React, { useState, useEffect } from "react";
-import ReactDOM from "react-dom";
-
-import "./styles.css";
 
 function App() {
   const [title, setTitle] = useState("Un Ejemplo de React");
