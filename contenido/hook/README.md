@@ -39,7 +39,7 @@ function App() {
       console.log("contador que se limpiara al desmontar");
     }, 2000);
 
-    // Simularion de componentWillUnmount
+    // Simulacion de componentWillUnmount
     // funcion de retorno que limpiara el interval
     // esto sucede al desmontar este component
     // el componente se desmonta cuando sale del dom
