@@ -97,30 +97,6 @@ export default Consumidor2;
 ```
 
 ***Consumidor3.jsx***
-```js
-import React, { Component } from 'react';
-import Context from './Context';
-
-class Consumidor3 extends Component {
-    redender () {
-        return (
-            <div>
-                <Context.Consumer>
-                    {(ctx) => (
-                        <div>
-                            {ctx.data.theme}
-                            <button onClick={ctx.toggleTheme}>Cambiar tema</button>
-                        </div>
-                    )}
-                </Context.Consumer>
-            </div>
-        )
-    }
-}
-export default Consumidor2;
-```
-
-***Consumidor3.jsx***
 Esta forma tambien es aplicable a componentes basados en funcion
 
 ```js
