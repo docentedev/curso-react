@@ -34,7 +34,7 @@ class App extends Component {
         // otra opcion de setState, es utilizar una funcion calback
         this.setState((prevState) => {
             // retornamos el nuevo state
-            return { theme: prevState === 'dark' ? 'dark' : 'light' };
+            return { theme: prevState.theme === 'dark' ? 'dark' : 'light' };
         });
     }
 
