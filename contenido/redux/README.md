@@ -34,7 +34,7 @@ la estructura minima que complementara a lo visto en n capas para redux sera
 +-- store
     +-- index.js // creamos el store aqui
     +-- actions
-    |   +-- todo.actions.js
+    |   +-- todos.actions.js
     +-- reducers
     |   +-- index.js // combinamos los reducers
     |   +-- todos.reducer.js
