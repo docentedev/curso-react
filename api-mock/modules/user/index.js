@@ -1,5 +1,7 @@
 var md5 = require("md5")
 
+var middleware = require("../../jwt/middleware");
+
 /**
  * 
  * @param {Express} app 
@@ -42,7 +44,7 @@ const userModule = (app, db) => {
     });
 
 
-    app.post("/api/user/", (req, res, next) => {
+    app.post("/api/user", middleware.ensureToken, (req, res, next) => {
         var errors = []
         if (!req.body.password) {
             errors.push("No password specified");
@@ -76,7 +78,7 @@ const userModule = (app, db) => {
 
 
 
-    app.patch("/api/user/:id", (req, res, next) => {
+    app.patch("/api/user/:id", middleware.ensureToken, (req, res, next) => {
         var data = {
             name: req.body.name,
             email: req.body.email,
@@ -101,7 +103,7 @@ const userModule = (app, db) => {
     })
 
 
-    app.delete("/api/user/:id", (req, res, next) => {
+    app.delete("/api/user/:id", middleware.ensureToken, (req, res, next) => {
         db.run(
             'DELETE FROM user WHERE id = ?',
             req.params.id,
