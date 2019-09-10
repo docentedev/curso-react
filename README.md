@@ -15,9 +15,9 @@ Material Curso de React
 - Context [link](https://github.com/docentedev/curso-react/tree/master/contenido/context)
 - Hooks [link](https://github.com/docentedev/curso-react/tree/master/contenido/hook)
     - proyecto ejemplo Context Hooks [link](https://github.com/docentedev/curso-react/tree/master/contenido/proyectos/context-hooks)
-- Redux [link](https://github.com/docentedev/curso-react/tree/master/contenido/redux)
+- Redux y Redux en N Capas [link](https://github.com/docentedev/curso-react/tree/master/contenido/redux)
     - proyecto ejemplo Redux [link](https://github.com/docentedev/curso-react/tree/master/contenido/proyectos/react-redux-todos)
-- Redux en N Capas
 - Redux Asincrono
+    - proyecto ejemplo redux asincrono [link](https://github.com/docentedev/curso-react/tree/master/contenido/proyectos/redux-async-simple)
 - React Router
 - proyecto `api-mock` [link](https://github.com/docentedev/curso-react/tree/master/api-mock)
