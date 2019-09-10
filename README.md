@@ -20,3 +20,4 @@ Material Curso de React
 - Redux en N Capas
 - Redux Asincrono
 - React Router
+- proyecto `api-mock` [link](https://github.com/docentedev/curso-react/tree/master/api-mock)
