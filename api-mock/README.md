@@ -12,6 +12,8 @@
 
 ## Servicios protegidos
 > los servicios que tengan los verbos [POST/PATH/DELETE] estan protegidos con `JWT`
+> los servicios protegidos, requieren el paso del header `authorization` con el valor `bearer {token}`
+> donde `{token}` representa el token retornado en el servicio `/login` mencionado mas abajo
 
 - /api/user [GET/POST]
     - `GET`: retorna todos los usuarios
