@@ -10,8 +10,8 @@ const UserDetail = (props) => {
             response.json().then((jsonResponse) => {
                 setUser(jsonResponse.data);
             })
-        })
-    }, []);
+        });
+    }, [id]);
 
     return (
         <div className="view-user-detail">
