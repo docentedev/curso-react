@@ -6,7 +6,7 @@ const privateKey = fs.readFileSync('./keys/jwtRS256.key');
 // console.log(token);
 
 const sign = (username, callback) => {
-    jwt.sign({ username: 'username' }, privateKey, { algorithm: 'RS256' },
+    jwt.sign({ username: username }, privateKey, { algorithm: 'RS256' },
         callback,
     )
 };

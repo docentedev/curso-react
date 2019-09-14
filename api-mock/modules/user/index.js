@@ -1,6 +1,5 @@
-var md5 = require("md5")
-
 var middleware = require("../../jwt/middleware");
+const { encryptPassword } = require('../../crypto');
 
 /**
  * 
@@ -43,8 +42,8 @@ const userModule = (app, db) => {
         });
     });
 
-
-    app.post("/api/user", middleware.ensureToken, (req, res, next) => {
+    app.post("/api/user", middleware.ensureToken, async (req, res, next) => {
+        const password = await encryptPassword(req.body.password);
         var errors = []
         if (!req.body.password) {
             errors.push("No password specified");
@@ -59,7 +58,7 @@ const userModule = (app, db) => {
         var data = {
             name: req.body.name,
             email: req.body.email,
-            password: md5(req.body.password)
+            password: password,
         }
         var sql = 'INSERT INTO user (name, email, password) VALUES (?,?,?)'
         var params = [data.name, data.email, data.password]
@@ -78,11 +77,12 @@ const userModule = (app, db) => {
 
 
 
-    app.patch("/api/user/:id", middleware.ensureToken, (req, res, next) => {
+    app.patch("/api/user/:id", middleware.ensureToken, async (req, res, next) => {
+        const password = await encryptPassword(req.body.password);
         var data = {
             name: req.body.name,
             email: req.body.email,
-            password: req.body.password ? md5(req.body.password) : undefined
+            password: req.body.password ? password : undefined
         }
         db.run(
             `UPDATE user set 
