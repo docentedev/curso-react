@@ -19,13 +19,16 @@ const userModule = (app, db) => {
         let p_password = req.body.password
 
         comparePasswordHash(p_password, fakeUser.password).then(result => {
+
             if (p_username == fakeUser.username && result) {
-                sign(p_username, (err, token) => {
-                    res.send({
-                        token,
-                        message: "success"
-                    })
-                });
+                setTimeout(() => {
+                    sign(p_username, (err, token) => {
+                        res.send({
+                            token,
+                            message: "success"
+                        })
+                    });
+                }, 2000);
             } else {
                 res.send({
                     ok: false,
