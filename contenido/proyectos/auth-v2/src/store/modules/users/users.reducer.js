@@ -1,16 +1,14 @@
-import { START, SUCCESS, ERROR, CLEAR } from './login.const';
+import { START, SUCCESS, ERROR } from './users.const';
 
-const prevJwt = JSON.parse(localStorage.getItem('jwt'));
 const initialState = {
     loading: false,
-    data: prevJwt || null,
+    data: [],
     success: null,
     error: null,
     errorMessage: '',
-    existToken: !!prevJwt,
 };
 
-const loginReducer = (prevState = initialState, action) => {
+const usersReducer = (prevState = initialState, action) => {
     switch (action.type) {
         case START:
             return {
@@ -18,7 +16,6 @@ const loginReducer = (prevState = initialState, action) => {
                 loading: true,
             }
         case SUCCESS:
-            localStorage.setItem('jwt', JSON.stringify(action.payload))
             return {
                 ...prevState,
                 error: false,
@@ -34,19 +31,9 @@ const loginReducer = (prevState = initialState, action) => {
                 success: false,
                 errorMessage: action.payload,
             }
-        case CLEAR:
-            localStorage.removeItem('jwt');
-            return {
-                data: null,
-                error: false,
-                loading: false,
-                success: null,
-                errorMessage: '',
-                existToken: false,
-            }
         default:
             return prevState;
     }
 };
 
-export default loginReducer;
+export default usersReducer;

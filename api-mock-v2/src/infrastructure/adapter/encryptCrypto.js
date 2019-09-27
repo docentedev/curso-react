@@ -8,7 +8,15 @@ const privateKey = fs.readFileSync('./keys/jwtRS256.key');
 class EncryptCrypto {
 
     jwtSing = (username, callback) => {
-        jwt.sign({ username: username }, privateKey, { algorithm: 'RS256' },
+        jwt.sign(
+            {
+                username: username,
+            },
+            privateKey,
+            {
+                algorithm: 'RS256',
+                expiresIn: '1h',
+            },
             callback,
         );
     }

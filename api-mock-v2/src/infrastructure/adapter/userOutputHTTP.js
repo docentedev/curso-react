@@ -8,11 +8,11 @@ class UserOutputHTTP {
     }
 
     getAll() {
-        this.app.get('/api/user', this.userController.getAll);
+        this.app.get('/api/user', ensureToken, this.userController.getAll);
     }
 
     get() {
-        this.app.get('/api/user/:id', this.userController.get);
+        this.app.get('/api/user/:id', ensureToken, this.userController.get);
     }
 
     delete() {
