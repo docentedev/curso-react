@@ -8,6 +8,7 @@
         "codecov": "^3.6.1",
         "react": "^16.9.0",
         "react-dom": "^16.9.0",
+        "react-icons": "^3.7.0",
         "react-redux": "^7.1.1",
         "react-router-dom": "^5.1.0",
         "react-scripts": "3.1.2",
@@ -20,7 +21,7 @@
     "scripts": {
         "start": "react-scripts start",
         "build": "react-scripts build",
-        "test": "react-scripts test",
+        "test": "set CI=true && react-scripts test --watchAll=false",
         "eject": "react-scripts eject"
     },
     "eslintConfig": {
@@ -41,5 +42,14 @@
     "devDependencies": {
         "enzyme": "^3.10.0",
         "enzyme-adapter-react-16": "^1.14.0"
+    },
+    "jest": {
+        "collectCoverageFrom": [
+            "**/*.{js,jsx}",
+            "!**/node_modules/**",
+            "!**/coverage/**",
+            "!**/serviceWorker.js",
+            "!**/index.js"
+        ]
     }
 }

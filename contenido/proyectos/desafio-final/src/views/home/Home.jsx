@@ -1,11 +1,16 @@
 import React from 'react';
+import { Container, Row, Col} from 'reactstrap';
 import { Link } from 'react-router-dom';
-const Home = (props) => {
-
+const Home = () => {
     return (
         <div className="home">
-            <Link to="login">a</Link>
-            <button>Click</button>
+            <Container>
+                <Row>
+                    <Col>
+                    <Link to="login">Iniciar Sesión</Link>
+                    </Col>
+                </Row>
+            </Container>
        </div>
     );
 };

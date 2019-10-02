@@ -5,14 +5,14 @@ import { Button } from 'reactstrap';
 import PrivateRoute from './components/private-route/PrivateRoute';
 
 import store from './store';
-
 import Footer from './components/footer/Footer';
-
 import HomeView from './views/home/Home';
 
 import UserListView from './views/user-list/UserList';
 import LoginView from './views/login/Login';
 import UserCreate from './views/user-create/UserCreate';
+
+import UserDetailView from './views/user-detail/UserDetail';
 
 import Header from './components/header/Header';
 
@@ -28,6 +28,7 @@ function App() {
           
           <PrivateRoute path="/dashboard" component={Header} />
           <PrivateRoute path="/dashboard/users" exact component={UserListView} />
+          <PrivateRoute path="/dashboard/users/view/:id" exact component={UserDetailView} />
           <PrivateRoute path="/dashboard/users/create" exact component={UserCreate} />
           <Route path="/login" exact component={LoginView} />
           <Footer />

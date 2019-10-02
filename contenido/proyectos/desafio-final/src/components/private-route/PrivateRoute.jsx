@@ -6,7 +6,6 @@ const isLogin = () => {
 
     const jwt = localStorage.getItem('jwt'); 
     const result = !!jwt;
-
     return result;
 }
 
