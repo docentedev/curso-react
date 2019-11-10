@@ -14,7 +14,7 @@ const UserDetail = (props) => {
     const userData = useSelector(store => store.user.get);
     useEffect(() => {
         dispatch(getActionsAsyncCreator(props.match.params.id))
-    }, [props]);
+    }, [props, dispatch]);
 
     const handlerBack = () => {
         props.history.push('/dashboard/users')

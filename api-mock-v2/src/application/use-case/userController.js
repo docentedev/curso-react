@@ -9,6 +9,7 @@ class UserController {
         this.userPersist = new UserPersist();
         this.encrypt = new Encrypt();
     }
+
     getAll = (req, res, next) => {
         const p = this.userPersist.getAll();
         p.then(users => res.json({ message: 'success', data: users }));

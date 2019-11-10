@@ -1,23 +1,13 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { Route, Redirect } from 'react-router-dom';
 
 
-const isLogin = () => {
-
-    const jwt = localStorage.getItem('jwt'); 
-    const result = !!jwt;
-    return result;
-}
-
 const PrivateRoute = ({component: Component, ...rest}) => {
+    const jwt = !!useSelector(store => store.auth.login.data);
     return (
-
-        // Show the component only when the user is logged in
-        // Otherwise, redirect the user to /signin page
         <Route {...rest} render={props => (
-            isLogin() ?
-                <Component {...props} />
-            : <Redirect to="/" />
+            jwt ? <Component {...props} /> : <Redirect to="/" />
         )} />
     );
 };
