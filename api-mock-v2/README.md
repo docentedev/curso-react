@@ -1,5 +1,7 @@
 # Api Mock para test de Front End
 
+NODE VERSION v12.13.0
+
 ## iniciar
 - `npm install` o `yarn`
 - `npm start` o `yarn start`

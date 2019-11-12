@@ -8,7 +8,16 @@ const app = express();
 
 const HTTP_PORT = 3333;
 app.locals.lang = 'es-CL';
-app.locals.appName = 'Api Mock'; 
+app.locals.appName = 'Api Mock';
+
+// VIEWS
+app.use(express.static('public'));
+app.set('view engine', 'ejs');
+app.get('/', (req, res) => {
+    const data = { host: 'localhost:3000' };
+    res.render('index', data);
+});
+
 
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));

@@ -1,0 +1,99 @@
+.app-container {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.api-def {
+    background: #f1f8e9;
+    margin-bottom: 20px;
+    color: #33691E;
+    border-radius: 2px;
+}
+
+.api-def__body {
+    padding: 10px;
+}
+
+.api-def h3 {
+    margin: 0;
+    display: block;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.api-def p {}
+
+.api-url {
+    border: solid 1px #8BC34A;
+    border-radius: 2px;
+    background: #f1f8e9;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.api-url .api-url__method {
+    min-width: 62px;
+    color: #F1F8E9;
+    display: inline-block;
+    background: #8BC34A;
+    padding: 10px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.api-url .api-url__method::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid #8bc34a;
+    clear: both;
+    right: -20px;
+    bottom: 0;
+    margin: auto;
+}
+
+.api-url .api-url__const {
+    color: #8BC34A;
+    display: inline-block;
+    background: #f1f8e9;
+    padding: 10px 0 10px 20px;
+}
+
+.api-url .api-url__endpoint {
+    color: #33691E;
+    display: inline-block;
+    background: #F1F8E9;
+    padding: 10px 10px 10px 0;
+}
+
+
+/* COLLAPSE */
+
+.collapse {
+    position: relative;
+}
+
+.collapse .api-def__body {}
+
+.collapse.open .api-def__body {
+    display: block;
+}
+
+.collapse.close .api-def__body {
+    display: none;
+}
+
+.collapse .collapse__button {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    background: #009688;
+    border: none;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}

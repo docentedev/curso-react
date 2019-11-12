@@ -8,7 +8,8 @@ class UserOutputHTTP {
     }
 
     getAll() {
-        this.app.get('/api/user', ensureToken, this.userController.getAll);
+        // para proteger agregar ensureToken
+        this.app.get('/api/user', this.userController.getAll);
     }
 
     get() {
