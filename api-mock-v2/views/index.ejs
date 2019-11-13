@@ -28,6 +28,11 @@
                                 <span class="api-url__endpoint">/api/user</span>
                             </div>
                             <p>Acceso publico</p>
+                            <div>
+                                <button id="get-all-user">Consultar</button>
+
+                            </div>
+                            <textarea id="get-all-user-out"></textarea>
                         </div>
                     </div>
                 </div>
@@ -177,5 +182,12 @@
     </div>
 </body>
 <script src="/js/collapse.js"></script>
+<script src="/js/http.js"></script>
+<script>
+    httpClientApp.registerGetAction(
+        document.getElementById('get-all-user'),
+        document.getElementById('get-all-user-out'),
+        '<%= host %>/api/user');
+</script>
 
 </html>

@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require("body-parser");
+const PostOutput = require('./src/infrastructure/port/postOutput');
 const UserOutput = require('./src/infrastructure/port/userOutput');
 const AuthOutput = require('./src/infrastructure/port/authOutput');
 
@@ -14,7 +15,7 @@ app.locals.appName = 'Api Mock';
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
 app.get('/', (req, res) => {
-    const data = { host: 'localhost:3000' };
+    const data = { host: `http://localhost:${HTTP_PORT}` };
     res.render('index', data);
 });
 
@@ -27,5 +28,6 @@ app.use(bodyParser.json());
 app.listen(HTTP_PORT, () => { console.log(`Runing in port ${HTTP_PORT}`); });
 
 // modules
+new PostOutput(app).init();
 new UserOutput(app).init();
 new AuthOutput(app).init();

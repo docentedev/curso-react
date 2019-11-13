@@ -29,15 +29,18 @@ const db = new Database(DBSOURCE, (err) => {
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             title text, 
             description text,
-            image_url text,
+            image_url text
             )`, (err) => {
             if (err) {
-                // Table already created
+
             } else {
-                // Table just created, creating some rows
-                //var insert = 'INSERT INTO user (name, email, password) VALUES (?,?,?)'
-                //db.run(insert, ["admin", "admin@example.com", md5("admin123456")])
-                //db.run(insert, ["user", "user@example.com", md5("user123456")])
+                var insert = 'INSERT INTO post (title, description, image_url) VALUES (?,?,?)'
+                    // Table already created
+                db.run(insert, ["Lenguajes preferidos", "desc", 'image.jpg'])
+                    // Table just created, creating some rows
+                    //var insert = 'INSERT INTO user (name, email, password) VALUES (?,?,?)'
+                    //db.run(insert, ["admin", "admin@example.com", md5("admin123456")])
+                    //db.run(insert, ["user", "user@example.com", md5("user123456")])
             }
         })
     }
