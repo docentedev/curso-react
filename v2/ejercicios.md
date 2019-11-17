@@ -22,11 +22,21 @@ Hacer mucho enfasis en el desarrollo por componentes
 
 Importante: todos deben ser  componentes funcionales, los imput y boton deben ser hechos por ustedes, puden ocupar reactstrap para las columnas y grilla de bootstrap, para hacer el contenedor me refiero al card, o los titulos... deben hacer un hook de estado para cada valor de los imput, pero estos hooks estaran en el componentes login y register, ya que los input no es necesario que tengan estado. deben tener un hook de effecto en login y register que este imprimiendo siempre todos los valores.
 
-### 3 Sistema de RUTAS
+### 3 Sistema de RUTAS
+- organizar vistas en privadas y publicas
+- las vistas son
+    - login
+    - register
+    - home publico
+    - dashboard privado
+    - vista detalle post public
+    - vista detalle post privado
+    - vista nuevo post
+    - vista editar post
 
-### Proyecto final
+### Proyecto final
 
-#### Sistio web con
+#### Sitio web con
 - vista publica para:
     - listado de post (el post puede ser lo que quieran)
     - detalle de post
