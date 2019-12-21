@@ -17,7 +17,7 @@ class PostOutputHTTP {
     }
 
     delete() {
-        this.app.delete('/api/post/:id', ensureToken, this.postController.delete);
+        this.app.delete('/api/post/:id', this.postController.delete);
     }
 
     save() {
@@ -25,7 +25,7 @@ class PostOutputHTTP {
     }
 
     update() {
-        this.app.patch('/api/post/:id', ensureToken, this.postController.update);
+        this.app.patch('/api/post/:id', this.postController.update);
     }
 }
 

@@ -42,15 +42,11 @@ class PostController {
     update = (req, res, next) => {
         const updatePost = makePostByRequestBody(req.body);
         const id = getRequestParam('id', req);
-        const p = this.encrypt.passwordCreate(updatePost.password);
 
-        p.then(hash => {
-            updatePost.setId(id);
-            updatePost.password = hash;
-            const pUpdate = this.postPersist.update(updatePost);
-            pUpdate.then(post => res.json({ message: 'success', data: post }));
-            pUpdate.catch(err => res.status(400).json({ error: err }));
-        }).catch(err => res.status(400).json({ error: err }));
+        updatePost.id = id;
+        const pUpdate = this.postPersist.update(updatePost);
+        pUpdate.then(post => res.json({ message: 'success', data: post }));
+        pUpdate.catch(err => res.status(400).json({ error: err }));
 
     }
 }
