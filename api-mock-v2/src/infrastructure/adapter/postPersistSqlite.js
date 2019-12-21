@@ -4,7 +4,7 @@ const { createPostListPublic, createPost, createPostPublic, createPostIdOnly } =
 class PostPersist {
     save(post) {
         var sql = 'INSERT INTO post (title, description, image_url) VALUES (?,?,?)'
-        var params = [post.title, post.email, post.image_url]
+        var params = [post.title, post.description, post.image_url]
         return new Promise((resolve, reject) => {
             db.run(sql, params, function(err, result) {
                 if (err) {
