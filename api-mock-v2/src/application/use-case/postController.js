@@ -32,22 +32,11 @@ class PostController {
 
     save = (req, res, next) => {
         const newPost = makePostByRequestBody(req.body);
-        const p = this.encrypt.passwordCreate(newPost.password);
-        const errors = [];
 
-        if (!newPost.password) errors.push('No password specified');
-        if (!newPost.email) errors.push('No email specified');
-        if (errors.length) {
-            res.status(400).json({ error: errors.join(",") });
-            return;
-        }
+        const pSave = this.postPersist.save(newPost);
+        pSave.then(post => res.json({ message: 'success', data: post }));
+        pSave.catch(err => res.status(400).json({ error: err }));
 
-        p.then(hash => {
-            newPost.password = hash;
-            const pSave = this.postPersist.save(newPost);
-            pSave.then(post => res.json({ message: 'success', data: post }));
-            pSave.catch(err => res.status(400).json({ error: err }));
-        }).catch(err => res.status(400).json({ error: err }));
     }
 
     update = (req, res, next) => {

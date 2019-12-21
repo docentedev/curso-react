@@ -9,7 +9,7 @@ class UserOutputHTTP {
 
     getAll() {
         // para proteger agregar ensureToken
-        this.app.get('/api/user', this.userController.getAll);
+        this.app.get('/api/user', ensureToken, this.userController.getAll);
     }
 
     get() {
@@ -21,7 +21,7 @@ class UserOutputHTTP {
     }
 
     save() {
-        this.app.post('/api/user', ensureToken, this.userController.save);
+        this.app.post('/api/user', this.userController.save);
     }
 
     update() {

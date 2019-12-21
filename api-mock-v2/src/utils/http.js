@@ -18,3 +18,7 @@ module.exports.makeUserByRequestBody = (body) => {
         body.password
     );
 };
+
+module.exports.makePostByRequestBody = (body) => {
+    return body;
+};

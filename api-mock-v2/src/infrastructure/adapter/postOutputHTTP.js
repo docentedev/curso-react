@@ -13,7 +13,7 @@ class PostOutputHTTP {
     }
 
     get() {
-        this.app.get('/api/post/:id', ensureToken, this.postController.get);
+        this.app.get('/api/post/:id', this.postController.get);
     }
 
     delete() {
@@ -21,7 +21,7 @@ class PostOutputHTTP {
     }
 
     save() {
-        this.app.post('/api/post', ensureToken, this.postController.save);
+        this.app.post('/api/post', this.postController.save);
     }
 
     update() {
