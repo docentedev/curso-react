@@ -19,7 +19,7 @@ class PostPersist {
     }
 
     update(post) {
-        const params = [post.title, post.email, post.image_url, post.id];
+        const params = [post.title, post.description, post.image_url, post.id];
         const sql = `UPDATE post set 
         title = coalesce(?,title), 
         description = COALESCE(?,description), 
